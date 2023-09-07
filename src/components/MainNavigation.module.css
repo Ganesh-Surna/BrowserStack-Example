@@ -1,0 +1,97 @@
+.header {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 3%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+  color: white;
+  background-color: rgb(3, 6, 48);
+  z-index: 1;
+}
+.logo-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.logo-container img {
+  width: 16rem;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.list li {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.list li:hover {
+  cursor: pointer;
+  color: rgb(39, 131, 252);
+}
+
+.dashboard a {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: 1px solid white;
+  color: white;
+}
+.dashboard a:hover {
+  background-color: rgb(39, 131, 252);
+  border-color: rgb(39, 131, 252);
+  color: white;
+}
+
+.sub-list {
+  display: none;
+}
+
+.list li:hover .sub-list {
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.26);
+  padding: 0.25rem 1rem;
+  top: 9vh;
+  border-radius: 0.25rem;
+  /* margin-left: -1rem; */
+}
+.list li:hover .sub-list {
+  display: flex;
+  flex-direction: column;
+}
+.list li:hover .sub-list li {
+  color: black;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+.list li:hover .sub-list li:last-child {
+  border-bottom: none;
+}
+.list li:hover .sub-list li:hover {
+  color: rgb(44, 9, 241);
+}

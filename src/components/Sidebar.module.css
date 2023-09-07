@@ -1,0 +1,55 @@
+.sidebar {
+    position: fixed;
+    top:10vh;
+    left: 0;
+    width:20%;
+    padding:1rem;
+    border-right: 1px solid #ccc;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    z-index: 1;
+
+}
+.drop-down{
+    width:100%;
+    padding:0.5rem 1rem;
+    border:1px solid #ccc;
+    border-radius: 0.25rem;
+
+}
+
+.drop-down:focus{
+    border:1px solid rgb(0, 132, 255);
+    outline: none;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.fields a{
+    font-size: 1rem;
+    color:#2c2a2a;
+    text-decoration: none;
+    padding: 0.5rem;
+    width:100%;
+    border-radius: 0.35rem;
+    border:2px solid transparent;
+    display: flex;
+    gap:0.75rem;
+    align-items: center;
+}
+
+.fields a:hover{
+    color:blue;
+    background-color: rgb(240, 251, 255);
+    border:2px solid rgb(240, 251, 255);
+}
+.fields a.active {
+    border-color:rgb(0, 132, 255);
+    background-color: rgb(240, 251, 255);
+    color:blue;
+}

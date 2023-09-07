@@ -1,0 +1,6 @@
+.content{
+    margin-top: 20vh;
+    overflow-y: auto;
+    height: 80vh;
+    padding:0.5rem 1rem;
+  }

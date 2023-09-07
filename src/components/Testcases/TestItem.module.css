@@ -1,0 +1,27 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.text h2, .text p{
+    margin:0;
+    flex:1;
+    padding: 0;
+}
+.actions{
+    flex:1;
+    align-self: flex-end;
+}
+.actions button{
+    padding:0.5rem 1rem;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.actions button:hover{
+    background-color: rgb(240, 251, 255);
+    border-color: rgb(45, 81, 241);
+    color:blue;
+    cursor: pointer;
+}
