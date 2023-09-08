@@ -4,8 +4,9 @@ import ErrorPage from "./pages/ErrorPage";
 import DashboardPage from "./pages/DashboardPage";
 import TestcasesPage from "./pages/TestcasesPage";
 import TestrunsPage from "./pages/TestrunsPage";
-import { useSelector } from "react-redux";
-import TestDetails from "./components/Testcases/TestDetails/TestDetails";
+// import { useSelector } from "react-redux";
+// import TestDetails from "./components/Testcases/TestDetails/TestDetails";
+import TestDetailsPage from "./pages/TestDetailsPage";
 
 
 const router = createBrowserRouter([
@@ -21,11 +22,9 @@ const router = createBrowserRouter([
       {
         path: "folder",
         element: <TestcasesPage />,
-        children:[
-          {
-            path:":testId", element:<TestDetails/>
-          }
-        ]
+      },
+      {
+        path:"folder/:testId", element:<TestDetailsPage/>
       },
       {
         path: "test-runs",
@@ -36,10 +35,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const isShow=useSelector(state=>state.uiKey.isModalShow);
+  // const isShow=useSelector(state=>state.uiKey.isModalShow);
     
   return <>
-    {isShow && <TestDetails/>}
+    {/* {isShow && <TestDetails/>} */}
     <RouterProvider router={router} />
   </>;
 }

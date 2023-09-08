@@ -11,7 +11,7 @@
   align-items: center;
   color: white;
   background-color: rgb(3, 6, 48);
-  z-index: 1;
+  z-index: 2;
 }
 .logo-container {
   display: flex;

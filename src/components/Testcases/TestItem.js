@@ -3,16 +3,17 @@ import ItemCard from "../../UI/ItemCard";
 import classes from "./TestItem.module.css";
 import { uiActions } from "../../store/ui-slice";
 import { testItemActions } from "../../store/testItem-slice";
-// import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function TestItem({item}){
     const dispatch=useDispatch();
-    // const navigate=useNavigate();
+    const navigate=useNavigate();
 
     const handleShow=()=>{
         dispatch(testItemActions.getTestItemData(item));
         dispatch(uiActions.showModal());
-        // navigate(`${item.id}`);
+        navigate(item.id);
     }
 
     return <ItemCard>

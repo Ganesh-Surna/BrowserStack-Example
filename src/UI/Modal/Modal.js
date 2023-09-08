@@ -10,19 +10,23 @@ const ModalLayout=({childrenProps})=>{
     return <div className={classes.modal}>{childrenProps}</div>
 };
 
-const Backdrop=()=>{
-    const dispatch=useDispatch();
+const Backdrop=(props)=>{
+    // const dispatch=useDispatch();
     // const navigate=useNavigate();
 
-    const handleClose=()=>{
+    // const handleClose=()=>{
         // navigate("..");
-        dispatch(uiActions.hideModal());
+    //     dispatch(uiActions.hideModal());
+    // }
+
+    const handleClose=()=>{
+        props.onClick();
     }
 
     return <div className={classes.backdrop} onClick={handleClose}/>
 }
 
-const Modal=({children})=>{
+const Modal=({children, onClose})=>{
 
     return <>
         {
@@ -33,7 +37,7 @@ const Modal=({children})=>{
         }
         {
             ReactDOM.createPortal(
-                <Backdrop/>,
+                <Backdrop onClick={onClose} />,
                 document.getElementById("modal")
             )
         }
